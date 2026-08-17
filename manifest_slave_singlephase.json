@@ -1,0 +1,15 @@
+{
+  "name": "Vanguard Slave - Single Phase",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "VanguardSlaveSinglePhase.ino.bootloader.bin", "offset": 4096 },
+        { "path": "VanguardSlaveSinglePhase.ino.partitions.bin", "offset": 32768 },
+        { "path": "VanguardSlaveSinglePhase.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
