@@ -1,0 +1,15 @@
+{
+  "name": "Vanguard Master - Single Phase",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "VanguardMasterSinglePhase.ino.bootloader.bin", "offset": 4096 },
+        { "path": "VanguardMasterSinglePhase.ino.partitions.bin", "offset": 32768 },
+        { "path": "VanguardMasterSinglePhase.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
