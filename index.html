@@ -2,11 +2,62 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vanguard Firmware Installer</title>
   <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 40px 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .card {
+      max-width: 420px;
+      margin: 0 auto 24px auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 30px;
+    }
+  </style>
 </head>
-<body style="font-family:sans-serif;text-align:center;margin-top:60px;">
-  <h2>Vanguard Master Firmware Installer</h2>
-  <p>Connect the ESP32 via USB, then click below.</p>
-  <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+<body>
+  <h1>Vanguard Firmware Installer</h1>
+
+  <div class="card">
+    <h2>Master — Three Phase</h2>
+    <esp-web-install-button manifest="manifest_master_3phase.json"></esp-web-install-button>
+  </div>
+
+  <div class="card">
+    <h2>Slave — Three Phase</h2>
+    <esp-web-install-button manifest="manifest_slave_3phase.json"></esp-web-install-button>
+  </div>
+
+  <div class="card">
+    <h2>Master — Single Phase</h2>
+    <esp-web-install-button manifest="manifest_master_singlephase.json"></esp-web-install-button>
+  </div>
+
+  <div class="card">
+    <h2>Slave — Single Phase</h2>
+    <esp-web-install-button manifest="manifest_slave_singlephase.json"></esp-web-install-button>
+  </div>
+
+  <p class="note">Use Chrome or Edge. Connect your ESP32 via USB before clicking Install. If the connection fails, try holding the BOOT button while clicking Install.</p>
 </body>
 </html>
