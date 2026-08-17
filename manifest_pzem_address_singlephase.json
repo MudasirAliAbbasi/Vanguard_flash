@@ -1,0 +1,15 @@
+{
+  "name": "PZEM Address Setter - Single Phase",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        { "path": "pzem_address_singlePhase.ino.bootloader.bin", "offset": 4096 },
+        { "path": "pzem_address_singlePhase.ino.partitions.bin", "offset": 32768 },
+        { "path": "pzem_address_singlePhase.ino.bin", "offset": 65536 }
+      ]
+    }
+  ]
+}
